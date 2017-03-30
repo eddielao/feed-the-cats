@@ -2,7 +2,7 @@
  * enchant.js v0.8.3
  * http://enchantjs.com
  *
- * Copyright UEI Corporation
+ * Copyright Ubiquitous Entertainment Inc.
  * Released under the MIT license.
  */
 
@@ -214,34 +214,34 @@ enchant.Class = function(superclass, definition) {
 /**
  * Creates a class.
  *
- * When defining a class that extends from another class, 
+ * When defining a class that extends from another class,
  * the constructor of the other class will be used by default.
  * Even if you override this constructor, you must still call it
  * to ensure that the class is initialized correctly.
  *
  * @example
  * // Creates a Ball class.
- * var Ball = Class.create({ 
+ * var Ball = Class.create({
  *
  *     // Ball's constructor
  *     initialize: function(radius) {
  *       // ... code ...
- *     }, 
+ *     },
  *
  *     // Defines a fall method that doesn't take any arguments.
- *     fall: function() { 
+ *     fall: function() {
  *       // ... code ...
  *     }
  * });
  *
  * // Creates a Ball class that extends from "Sprite"
- * var Ball = Class.create(Sprite);  
+ * var Ball = Class.create(Sprite);
  *
  * // Creates a Ball class that extends from "Sprite"
- * var Ball = Class.create(Sprite, { 
+ * var Ball = Class.create(Sprite, {
  *
  *     // Overwrite Sprite's constructor
- *     initialize: function(radius) { 
+ *     initialize: function(radius) {
  *
  *         // Call Sprite's constructor.
  *         Sprite.call(this, radius * 2, radius * 2);
@@ -405,7 +405,7 @@ enchant.ENV = {
         }
     }()),
     /**
-     * Determines if for current browser Flash should be used to play 
+     * Determines if for current browser Flash should be used to play
      * sound instead of the native audio class.
      * True, if flash should be used.
      * @type Boolean
@@ -934,7 +934,7 @@ enchant.EventTarget = enchant.Class.create({
         /**
          * @name enchant.Core
          * @class
-         * A class for controlling the core’s main loop and scenes.
+         * A class for controlling the coreâ€™s main loop and scenes.
          *
          * There can be only one instance at a time. When the
          * constructor is executed while an instance exists, the
@@ -1592,7 +1592,7 @@ enchant.EventTarget = enchant.Class.create({
             this.dispatchEvent(new enchant.Event('exitframe'));
             this.frame++;
             now = window.getTime();
-            
+
             this._requestNextFrame(1000 / this.fps - (now - this._calledTime));
         },
         getTime: function() {
@@ -2186,7 +2186,7 @@ enchant.Node = enchant.Class.create(enchant.EventTarget, {
             }
         });
 
-        // Nodeが生成される際に, tl プロパティに Timeline オブジェクトを追加している.
+        // NodeãŒç”Ÿæˆã•ã‚Œã‚‹éš›ã«, tl ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã« Timeline ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¿½åŠ ã—ã¦ã„ã‚‹.
         if (enchant.ENV.USE_ANIMATION) {
             this.tl = new enchant.Timeline(this);
         }
@@ -2281,7 +2281,7 @@ enchant.Node = enchant.Class.create(enchant.EventTarget, {
                 childNodes[i].remove();
             }
         }
-        
+
         this.clearEventListener();
     }
 });
@@ -2406,7 +2406,7 @@ enchant.Entity = enchant.Class.create(enchant.Node, {
         /**
          * Defines this Entity as a button.
          * When touched or clicked the corresponding button event is dispatched.
-         * Valid buttonModes are: left, right, up, down, a, b. 
+         * Valid buttonModes are: left, right, up, down, a, b.
          * @type String
          */
         this.buttonMode = null;
@@ -2536,7 +2536,7 @@ enchant.Entity = enchant.Class.create(enchant.Node, {
     },
     /**
      * Performs a collision detection based on whether or not the bounding rectangles are intersecting.
-     * @param {*} other An object like Entity, with the properties x, y, width, height, which are used for the 
+     * @param {*} other An object like Entity, with the properties x, y, width, height, which are used for the
      * collision detection.
      * @return {Boolean} True, if a collision was detected.
      */
@@ -2637,7 +2637,7 @@ enchant.Entity = enchant.Class.create(enchant.Node, {
     },
     /**
      * Performs a collision detection based on distance from the Entity's central point.
-     * @param {*} other An object like Entity, with properties x, y, width, height, which are used for the 
+     * @param {*} other An object like Entity, with properties x, y, width, height, which are used for the
      * collision detection.
      * @param {Number} [distance] The greatest distance to be considered for a collision.
      * The default distance is the average of both objects width and height.
@@ -2912,9 +2912,9 @@ enchant.Sprite = enchant.Class.create(enchant.Entity, {
     },
     /**
      * Index of the frame to be displayed.
-     * Frames with the same width and height as Sprite will be arrayed from upper left corner of the 
-     * {@link enchant.Sprite#image} image. When a sequence of numbers is provided, the displayed frame 
-     * will switch automatically. At the end of the array the sequence will restart. By setting 
+     * Frames with the same width and height as Sprite will be arrayed from upper left corner of the
+     * {@link enchant.Sprite#image} image. When a sequence of numbers is provided, the displayed frame
+     * will switch automatically. At the end of the array the sequence will restart. By setting
      * a value within the sequence to null, the frame switching is stopped.
      *
      * @example
@@ -3344,7 +3344,7 @@ enchant.Map = enchant.Class.create(enchant.Entity, {
     },
     /**
      * Set map data.
-     * Sets the tile data, whereas the data (two-dimensional array with indizes starting from 0) 
+     * Sets the tile data, whereas the data (two-dimensional array with indizes starting from 0)
      * is mapped on the image starting from the upper left corner.
      * When more than one map data array is set, they are displayed in reverse order.
      * @param {...Number[][]} data Two-dimensional array of tile indizes. Multiple designations possible.
@@ -5654,7 +5654,7 @@ enchant.DOMSound = enchant.Class.create(enchant.EventTarget, {
         }
     },
     /**
-     * Volume. 0 (muted) ～ 1 (full volume).
+     * Volume. 0 (muted) ï½ž 1 (full volume).
      * @type Number
      */
     volume: {
@@ -5872,7 +5872,7 @@ enchant.WebAudioSound = enchant.Class.create(enchant.EventTarget, {
         }
     },
     /**
-     * Volume. 0 (muted) ～ 1 (full volume).
+     * Current playback position (seconds).
      * @type Number
      */
     volume: {
@@ -5888,7 +5888,7 @@ enchant.WebAudioSound = enchant.Class.create(enchant.EventTarget, {
         }
     },
     /**
-     * Current playback position (seconds).
+     * Volume. 0 (muted) ï½ž 1 (full volume).
      * @type Number
      */
     currentTime: {
@@ -5960,12 +5960,12 @@ enchant.Sound = window.AudioContext && enchant.ENV.USE_WEBAUDIO ? enchant.WebAud
 /**
  * @namespace
  * JavaScript translation of Robert Penner's "Easing Equations" library which is widely used in ActionScript.
- * 
+ *
  * @param [t] the current time
  * @param [b] the property's initial value
  * @param [c] how much the value should change
  * @param [d] how much time should elapse before value is changed
- * 
+ *
  * @return {Number}
  * <br/>
  * See: <a href="http://www.robertpenner.com/easing/">
@@ -6261,9 +6261,9 @@ enchant.Timeline = enchant.Class.create(enchant.EventTarget, {
      * Class for managing the action.
      *
      * For one node to manipulate the timeline of one must correspond.
-     * Time-line class has a method to add a variety of actions to himself,
-     * entities can be animated and various operations by using these briefly.
-     * You can choose time based and frame based(default) animation.
+ Â Â Â Â * Time-line class has a method to add a variety of actions to himself,
+ Â Â Â Â * entities can be animated and various operations by using these briefly.
+ Â Â Â Â * You can choose time based and frame based(default) animation.
      * @param {enchant.Node} node target node.
      * @constructs
      * @extends enchant.EventTarget
@@ -6793,18 +6793,18 @@ enchant.Action = enchant.Class.create(enchant.ActionEventTarget, {
     /**
      * @name enchant.Action
      * @class
-     * Actions are units that make up the timeline.
-     * It is a unit used to specify the action you want to perform.
-     * 
-     * Actions that have been added to the timeline are performed in sequential order.
-     * The transition from one action to the next occurs automatically 
-     * after the number of frames specified by the time parameter have elapsed.
-     *
-     * An actionstart event is fired when the action has started.
-     * An actionend event is fired when the action has stopped.
-     * For each frame that elapses, an actiontick event is fired.
-     * 
-     * You can specify a listener for these events to perform specific events when they occur.
+Â Â Â Â Â * Actions are units that make up the timeline.
+Â Â Â Â  * It is a unit used to specify the action you want to perform.
+Â Â Â Â  *
+Â Â Â Â  * Actions that have been added to the timeline are performed in sequential order.
+Â Â Â Â  * The transition from one action to the next occurs automatically
+Â Â Â Â  * after the number of frames specified by the time parameter have elapsed.
+Â Â Â Â  *
+Â Â Â Â  * An actionstart event is fired when the action has started.
+Â Â Â Â  * An actionend event is fired when the action has stopped.
+Â Â Â Â  * For each frame that elapses, an actiontick event is fired.
+Â Â Â Â  *
+Â Â Â Â  * You can specify a listener for these events to perform specific events when they occur.
      *
      * @param {Object} param
      * @param {Number} [param.time] The number of frames that the action will persist. For an infinite number set this to null.

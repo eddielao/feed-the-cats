@@ -1,6 +1,12 @@
-body {
-  display: flex;
-  justify-content: center;
+html, body{
+  /*display: flex;
+  justify-content: center;*/
   margin: 0;
   padding: 0;
+}
+
+#enchant-stage {
+  background-image: url("./images/boxes.png");
+  background-size: cover;
+  cursor: url("./images/cat-treat.png"), pointer;
 }

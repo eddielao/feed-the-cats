@@ -11,15 +11,15 @@
  * (9leapにアップロードした後のみランキング画面にジャンプする)
  *
  * @usage
- * 
+ *
  * var core = new Core(320, 320);
- * 
+ *
  * core.onload = function(){
  * // executed after player pushed "START"
  * // ...
  * if(some.condition)core.end(score, result);
  * };
- * 
+ *
  * core.start();
  */
 
@@ -28,7 +28,8 @@
     /**
      * @type {Object}
      */
-    enchant.nineleap = { assets: ['start.png', 'end.png'] };
+    enchant.nineleap = { assets: ['./images/start.png',
+                        './images/end.png'] };
 
     /**
      * @scope enchant.nineleap.Core.prototype
@@ -46,7 +47,7 @@
             this.addEventListener('load', function() {
                 var core = this;
                 this.startScene = new enchant.nineleap.SplashScene();
-                this.startScene.image = this.assets['start.png'];
+                this.startScene.image = this.assets['./images/start.png'];
                 this.startScene.addEventListener('touchend', function() {
                     if (core.started === false) {
                         if (core.onstart != null) {
@@ -75,7 +76,7 @@
                 this.pushScene(this.startScene);
 
                 this.endScene = new enchant.nineleap.SplashScene();
-                this.endScene.image = this.assets['end.png'];
+                this.endScene.image = this.assets['./images/end.png'];
                 this.removeEventListener('load', arguments.callee);
             });
             this.scoreQueue = false;
