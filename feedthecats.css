@@ -1,12 +1,21 @@
 html, body{
-  /*display: flex;
-  justify-content: center;*/
   margin: 0;
-  padding: 0;
+  padding: 0 10% 10% 10%;
 }
 
 #enchant-stage {
   background-image: url("./images/boxes2.png");
   background-size: cover;
   cursor: url("./images/cat-treat.png"), pointer;
+}
+
+.restart {
+  position: absolute;
+}
+
+input[type=button] {
+  font-size: medium;
+  background-color: black;
+  border-radius: 10px;
+  color: whitesmoke;
 }
