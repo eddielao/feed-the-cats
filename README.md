@@ -8,7 +8,7 @@
 
 Feed the Cats plays much like whack a mole but, instead of whacking, we are feeding. The game utilizes the Enchant JS library. The game is not time based but instead each game is fixed with number of chances the player get to feed.
 
-After the cats appears for the fixed number of times, the game is over.
+The game area turns the user's mouse pointer to a cat treat. Every element in the game is related to a cat theme, from the boxes with holes to the ending screen (saying "nap time"), instead of outputting "game over". After the cats appears for the fixed number of times, the game is over.
 
 ## Future Dirctions for the Project
 
