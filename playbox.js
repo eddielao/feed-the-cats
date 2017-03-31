@@ -55,8 +55,7 @@ Hole = Class.create( Sprite , {
                 *is mode 0 (appear).*/
                this.nextMode=0;
                this.waitFor = game.frame + generateRandNum(200);
-               /*Reset flag after treated droid
-                *disappears.*/
+
                this.currentTreat = false;
 
                //Reduce maximum amount of cats
@@ -82,7 +81,7 @@ Hole = Class.create( Sprite , {
               break;
       }
    },
-     //Whack cat
+
      feed() {
           //Do nothing if cat has been treated
           if(this.currentTreat)return;

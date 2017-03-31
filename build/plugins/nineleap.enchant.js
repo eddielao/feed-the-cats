@@ -29,7 +29,7 @@
      * @type {Object}
      */
     enchant.nineleap = { assets: ['./images/start.png',
-                        './images/end.png'] };
+                        './images/nap_time2.png'] };
 
     /**
      * @scope enchant.nineleap.Core.prototype
@@ -76,7 +76,7 @@
                 this.pushScene(this.startScene);
 
                 this.endScene = new enchant.nineleap.SplashScene();
-                this.endScene.image = this.assets['./images/end.png'];
+                this.endScene.image = this.assets['./images/nap_time2.png'];
                 this.removeEventListener('load', arguments.callee);
             });
             this.scoreQueue = false;

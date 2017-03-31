@@ -6,7 +6,7 @@ html, body{
 }
 
 #enchant-stage {
-  background-image: url("./images/boxes.png");
+  background-image: url("./images/boxes2.png");
   background-size: cover;
   cursor: url("./images/cat-treat.png"), pointer;
 }
