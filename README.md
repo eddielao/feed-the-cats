@@ -2,7 +2,7 @@
 
 [Feed the Cats](https://eddielao.github.io/js-project/)
 
-[screen shot](images/screen-shot.png)
+![screen shot](images/screen-shot.png)
 
 ## Features & Implementation
 
