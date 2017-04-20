@@ -14,9 +14,15 @@
     <script src='playbox.js'></script>
     <script src='utils.js'></script>
     <script src='main.js'></script>
+    <script language="javascript" type="text/javascript">
+        function playSound(soundfile) {
+          document.getElementById("enchant-stage").innerHTML=
+            "<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+        }
+</script>
     <title>Feed the Cats</title>
 </head>
-<body>
+<body height="600px" onclick="playSound('meow.wav');">
   <div class="restart"><input type="button" value="Try Again!" onClick="document.location.reload(true)"></div>
 </body>
 </html>
