@@ -14,8 +14,10 @@ html, body{
 }
 
 input[type=button] {
-  font-size: medium;
-  background-color: chocolate;
-  border-radius: 10px;
+  background-color: darkgoldenrod;
+  border-radius: 3px;
   color: whitesmoke;
+  display: inline-block;
+  font: 14px "Trebuchet MS", sans-serif;
+  padding: 8px 16px;
 }
