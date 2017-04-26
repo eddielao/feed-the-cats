@@ -14,16 +14,28 @@
     <script src='playbox.js'></script>
     <script src='utils.js'></script>
     <script src='main.js'></script>
-    <script language="javascript" type="text/javascript">
-        function playSound(soundfile) {
-          document.getElementById("enchant-stage").innerHTML=
-            "<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
-        }
-</script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script>
+    $(document).ready(function(){
+    $( "#hello" ).dialog({ autoOpen: false });
+    $( "#say_it" ).click(function() {
+    $( "#hello" ).dialog( "open" );
+    });
+    });
+    </script>
     <title>Feed the Cats</title>
 </head>
 <body>
-  <div class="restart"><input type="button" value="Try Again!" onClick="document.location.reload(true)"></div>
-  <div class="instruction">Instruction:</div>
+  <div class="restart">
+    <input type="button" value="Try Again!" onClick="document.location.reload(true)">
+    <button id="say_it">Say "Hello!"</button>
+  </div>
+  <div id="hello" title="Hello  World!">
+    <p><font face="Georgia" size="4">
+      Hey, world, I just said "Hello!"
+    </font></p>
+  </div>
 </body>
 </html>
