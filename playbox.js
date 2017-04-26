@@ -20,7 +20,6 @@ Hole = Class.create( Sprite , {
       //Defines an event listener for a cat getting feed
       this.addEventListener('touchstart', function() {
         this.feed();
-        game.assets['./meow.wav'].play();
       });
 
       //Set the cat mode to 2 (waiting) in the beginning
@@ -93,6 +92,9 @@ Hole = Class.create( Sprite , {
           if(this.frame>=2){
              //Set flag so we know he's been treated
              this.currentTreat = true;
+
+             game.assets['./meow.wav'].play();
+
 
              //cat after having been treated
              this.frame=5;
