@@ -1,5 +1,7 @@
-html, body{
+body{
   background-image: url("./images/body_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   padding: 5% 10% 10% 10%;
 }
@@ -7,9 +9,14 @@ html, body{
 #enchant-stage {
   background-image: url("./images/boxes2.png");
   background-size: cover;
+  border-style: groove;
+  border-radius: 270px;
   cursor: url("./images/cat-treat.png"), pointer;
-  height: 640px;
-  width: 640px;
+}
+
+#enchant-stage div {
+  border-style: groove;
+  border-radius: 270px;
 }
 
 .restart {
