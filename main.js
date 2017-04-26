@@ -18,5 +18,6 @@ window.onload = () => {
                }
           }
     }
+    game.scale = 1.5;
     game.start();
 }

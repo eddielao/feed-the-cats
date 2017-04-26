@@ -1,4 +1,5 @@
 html, body{
+  background-image: url("./images/body_background.jpg");
   margin: 0;
   padding: 5% 10% 10% 10%;
 }
@@ -7,6 +8,8 @@ html, body{
   background-image: url("./images/boxes2.png");
   background-size: cover;
   cursor: url("./images/cat-treat.png"), pointer;
+  height: 640px;
+  width: 640px;
 }
 
 .restart {
