@@ -18,7 +18,10 @@ Hole = Class.create( Sprite , {
       //Defines an event listener to be run every frame
       this.addEventListener('enterframe', this.flash);
       //Defines an event listener for a cat getting feed
-      this.addEventListener('touchstart', this.feed);
+      this.addEventListener('touchstart', function() {
+        this.feed();
+        game.assets['./meow.wav'].play();
+      });
 
       //Set the cat mode to 2 (waiting) in the beginning
       this.mode = 2;
