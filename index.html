@@ -19,10 +19,14 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
     <script>
     $(document).ready(function(){
-    $( "#hello" ).dialog({ autoOpen: false });
-    $( "#say_it" ).click(function() {
-    $( "#hello" ).dialog( "open" );
-    });
+      $( "#modal" ).dialog({ autoOpen: false });
+      $( "#instruction" ).click(function() {
+        $("#enchant-stage").hide();
+        $( "#modal" ).dialog( "open" );
+      });
+      $("#modal").dialog({
+        close: function() {$("#enchant-stage").show();}
+      });
     });
     </script>
     <title>Feed the Cats</title>
@@ -30,11 +34,11 @@
 <body>
   <div class="restart">
     <input type="button" value="Try Again!" onClick="document.location.reload(true)">
-    <button id="say_it">Say "Hello!"</button>
+    <input type="button" id="instruction" value="Instruction">
   </div>
-  <div id="hello" title="Hello  World!">
+  <div id="modal" title="How to Play">
     <p><font face="Georgia" size="4">
-      Hey, world, I just said "Hello!"
+      Feed the salmon <img src="./images/cat-treat.png" /> to the cats by clicking.
     </font></p>
   </div>
 </body>

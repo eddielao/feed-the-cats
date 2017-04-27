@@ -3,7 +3,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
-  padding: 5% 10% 10% 10%;
+  padding: 5% 35% 10% 35%;
 }
 
 #enchant-stage {
@@ -17,9 +17,12 @@ body{
 #enchant-stage div {
   border-style: groove;
   border-radius: 270px;
+  /*margin: 0% 0% 0% 25%;*/
 }
 
 .restart {
+  display: flex;
+  flex-direction: column;
   position: absolute;
 }
 
