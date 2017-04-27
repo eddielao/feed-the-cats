@@ -20,12 +20,6 @@ body{
   /*margin: 0% 0% 0% 25%;*/
 }
 
-.restart {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-}
-
 input[type=button] {
   background-color: darkgoldenrod;
   border-radius: 3px;
@@ -33,4 +27,14 @@ input[type=button] {
   display: inline-block;
   font: 14px "Trebuchet MS", sans-serif;
   padding: 8px 16px;
+}
+
+.restart {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.ui-button:focus {
+  outline: none;
 }
