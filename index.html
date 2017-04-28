@@ -32,17 +32,39 @@
     <title>Feed the Cats</title>
 </head>
 <body>
-  <div class="restart">
-    <div><input type="button" value="Try Again!" onClick="document.location.reload(true)"></div>
-    <div><input type="button" id="instruction" value="Instruction"></div>
-  </div>
-  <div id="modal" title="How to Play">
-    <p><font face="Georgia" size="4">
-      Feed <img src="./images/cat-treat.png" /> to the cats by clicking.
-      <br />
-      <br />
-      <center>1 feed = 1 purr point</center>
-    </font></p>
+
+  <div class="FTContainer">
+    <div class="contact">
+      <center>
+          <a href="https://github.com/eddielao/js-project">
+            <img src="https://res.cloudinary.com/eddielao/image/upload/c_scale,h_50,w_50/v1493403312/github-icon_eqgdbh.png" />
+          </a>
+          <h1>Feed the Cats</h1>
+          <a href="https://www.linkedin.com/in/eddielao">
+            <img src="https://res.cloudinary.com/eddielao/image/upload/c_scale,w_50/v1493403876/linkedin-logo_byswxh.png" />
+          </a>
+      </center>
+    </div>
+
+    <div class="restart">
+      <span>
+        <input type="button" id="instruction" value="Instruction">
+      </span>
+      <span>
+        <input type="button" value="Try Again!" onClick="document.location.reload(true)">
+      </span>
+    </div>
+
+    <div id="enchant-stage"></div>
+    
+    <div id="modal" title="How to Play">
+      <p><font face="Georgia" size="4">
+        Feed <img src="./images/cat-treat.png" /> to the cats by clicking. Use mouse for better experience.
+        <br />
+        <br />
+        <center>1 feed = 1 purr point</center>
+      </font></p>
+    </div>
   </div>
 </body>
 </html>

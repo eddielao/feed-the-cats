@@ -6,6 +6,18 @@ body{
   padding: 5% 35% 10% 35%;
 }
 
+.contact {
+  color: darkgoldenrod;
+  display: flex;
+  font-family: monospace;
+  justify-content: center;
+}
+
+.contact center {
+  display: flex;
+  align-items: center;
+}
+
 #enchant-stage {
   background-image: url("./images/boxes2.png");
   background-size: cover;
@@ -25,15 +37,24 @@ input[type=button] {
   border-radius: 3px;
   color: whitesmoke;
   display: inline-block;
-  font: 14px "Trebuchet MS", sans-serif;
+  font-family: monospace;
+  font-size: 14px;
   padding: 5px 5px;
   outline: none;
 }
 
+.FTContainer {
+  width: 480px;
+}
+
 .restart {
   display: flex;
-  flex-direction: column;
-  position: absolute;
+  justify-content: space-between;
+  width: 480px;
+}
+
+.restart div {
+  display: flex;
 }
 
 .ui-button:focus {
