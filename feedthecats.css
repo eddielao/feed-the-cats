@@ -26,7 +26,7 @@ input[type=button] {
   color: whitesmoke;
   display: inline-block;
   font: 14px "Trebuchet MS", sans-serif;
-  padding: 8px 16px;
+  padding: 5px 5px;
 }
 
 .restart {
@@ -37,4 +37,8 @@ input[type=button] {
 
 .ui-button:focus {
   outline: none;
+}
+
+div[class^="ui-"] {
+  position: sticky !important;
 }
