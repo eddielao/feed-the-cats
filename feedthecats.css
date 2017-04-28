@@ -27,6 +27,7 @@ input[type=button] {
   display: inline-block;
   font: 14px "Trebuchet MS", sans-serif;
   padding: 5px 5px;
+  outline: none;
 }
 
 .restart {
