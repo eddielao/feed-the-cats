@@ -1,6 +1,6 @@
 # Feed the Cats
 
-[Feed the Cats](https://eddielao.github.io/js-project/)
+[Feed the Cats](https://eddielao.github.io/feed-the-cats/)
 
 ![screen shot](images/screen-shot.png)
 
